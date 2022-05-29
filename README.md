@@ -31,7 +31,7 @@ Same as above, only with the second matrix as double.
 The following determinant method is called Laplace expansion.  
 *note that recursion was used in this function*  
 If the matrix is 2×2, calculate just like that: 
-<pre> 
+<pre>
 | 2 7 |  = 2 × 6 - 7 × 5  
 | 5 6 |  = -23  
 </pre>
