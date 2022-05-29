@@ -21,9 +21,9 @@ Function for printing quotient of two matrices.
 Multiplication takes place as follows:  
 In the resultant matrix R, the element Rij is the sum of products of the elements of row i in matrix A and column j in matrix B.  
 <pre>
-``( 1 2 )   ( 1 2 3 )   ( 1 × 1 + 2 × 4    1 × 2 + 2 × 5    1 × 3 + 2 × 6 )   ( 9  12 15 )``  
-``( 3 4 ) × (       ) = ( 3 × 1 + 4 × 4    3 × 2 + 4 × 5    3 × 3 + 4 × 6 ) = ( 19 26 33 )``  
-``( 5 6 )   ( 4 5 6 )   ( 5 × 1 + 6 × 4    5 × 2 + 6 × 5    5 × 3 + 6 × 6 )   ( 29 40 51 )``
+( 1 2 )   ( 1 2 3 )   ( 1 × 1 + 2 × 4    1 × 2 + 2 × 5    1 × 3 + 2 × 6 )   ( 9  12 15 )  
+( 3 4 ) × (       ) = ( 3 × 1 + 4 × 4    3 × 2 + 4 × 5    3 × 3 + 4 × 6 ) = ( 19 26 33 )  
+( 5 6 )   ( 4 5 6 )   ( 5 × 1 + 6 × 4    5 × 2 + 6 × 5    5 × 3 + 6 × 6 )   ( 29 40 51 )
 </pre>
 ###### **multiplyDouble**
 Same as above, only with the second matrix as double.
@@ -32,14 +32,14 @@ The following determinant method is called Laplace expansion.
 *note that recursion was used in this function*  
 If the matrix is 2×2, calculate just like that: 
 <pre> 
-``| 2 7 |  = 2 × 6 - 7 × 5``  
-``| 5 6 |  = -23``  
+| 2 7 |  = 2 × 6 - 7 × 5  
+| 5 6 |  = -23  
 </pre>
 If the matrix is more than 2×2, eg 3×3, calculate determinant as such:  
 <pre>
-``| 2 6 7 |       |  2 4  |       |  8 4  |       |  8 2  |     2 × (2 × 1 - 4 × 9)``  
-``| 8 2 4 | = 2 × |       | - 6 × |       | + 7 × |       | = - 6 × (8 × 1 - 4 × 6) = 448``  
-``| 6 9 1 |       |  9 1  |       |  6 1  |       |  6 9  |   + 7 × (8 × 9 - 6 × 2)``
+| 2 6 7 |       |  2 4  |       |  8 4  |       |  8 2  |     2 × (2 × 1 - 4 × 9)  
+| 8 2 4 | = 2 × |       | - 6 × |       | + 7 × |       | = - 6 × (8 × 1 - 4 × 6) = 448  
+| 6 9 1 |       |  9 1  |       |  6 1  |       |  6 9  |   + 7 × (8 × 9 - 6 × 2)
 </pre>
 ###### **divide**
 In division, we multiply the divident by the inverse of the divisor.  
@@ -50,21 +50,21 @@ It bears a similarity to the Laplace expansion that we used in the determinant.
 Also, the number of columns of the divident must be equal to the dimensions of the divisor  
 _In case of 2×2:_  
 <pre>
-``( a b ) ^ -1   (  d -b )``  
-``(     )      = (       )``  
-``( c d )        ( -c  a )``  
+( a b ) ^ -1   (  d -b )  
+(     )      = (       )  
+( c d )        ( -c  a )  
 </pre>
 _In case of 3×3:_  
 We get the matrix of minors, get the result's matrix of cofactors, and then get the adjoint by transposing the result. Finally, divide the adjoint by the determinant of the original matrix.  
 The following matrix has a determinant of -6  
 <pre>
-``                  (   |3 5|  |4 5|  |4 3|   )``  
-``                  (   |4 0| -|1 0|  |1 4|   )``  
-``                  (                         )``  
-``( 2 -1 3 ) ^ -1   (  |-1 3|  |2 3|  |2 -1|  )   ( -20  5 13 )       ( -20 12 -14 )``  
-``( 4  3 5 )      = ( -| 4 0|  |1 0| -|1  4|  ) = (  12 -3 -9 ) ----> (   5 -3   2 ) / -6``  
-``( 1  4 0 )        (                         )   ( -14  2 10 )       (  13 -9  10 )``  
-``                  (  |-1 3|  |2 3|  |2 -1|  )``  
-``                  (  | 3 5| -|4 5|  |4  3|  )``  
+                  (   |3 5|  |4 5|  |4 3|   )  
+                  (   |4 0| -|1 0|  |1 4|   )  
+                  (                         )  
+( 2 -1 3 ) ^ -1   (  |-1 3|  |2 3|  |2 -1|  )   ( -20  5 13 )       ( -20 12 -14 )  
+( 4  3 5 )      = ( -| 4 0|  |1 0| -|1  4|  ) = (  12 -3 -9 ) ----> (   5 -3   2 ) / -6  
+( 1  4 0 )        (                         )   ( -14  2 10 )       (  13 -9  10 )  
+                  (  |-1 3|  |2 3|  |2 -1|  )  
+                  (  | 3 5| -|4 5|  |4  3|  )  
 </pre>
 then we multiply the divident by the inverse of the divisor as illustrated above.
