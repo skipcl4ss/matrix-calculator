@@ -4,7 +4,7 @@
 
 This is a program that asks the user for two matrices up to size of 10×10, then can do a number of basic operations on them.  
 These operations are:  
-***A+B, A-B, B-A, A×B, B×A, A/B, B/A, |A|, |B|***  
+***A+B, A-B, B-A, A×B, B×A, A×B<sup>-1</sup>, B×A<sup>-1</sup>, |A|, |B|***  
 
 ## How The Functions Work
 
@@ -16,7 +16,7 @@ Multiplication takes place as follows:
 In the resultant matrix R, the element Rij is the sum of products of the elements of row i in matrix A and column j in matrix B.  
 
 ``` c++
-( 1 2 )   ( 1 2 3 )   ( 1 × 1 + 2 × 4    1 × 2 + 2 × 5    1 × 3 + 2 × 6 )   ( 9  12 15 )  
+( 1 2 )   ( 1 2 3 )   ( 1 × 1 + 2 × 4    1 × 2 + 2 × 5    1 × 3 + 2 × 6 )   (  9 12 15 )  
 ( 3 4 ) × (       ) = ( 3 × 1 + 4 × 4    3 × 2 + 4 × 5    3 × 3 + 4 × 6 ) = ( 19 26 33 )  
 ( 5 6 )   ( 4 5 6 )   ( 5 × 1 + 6 × 4    5 × 2 + 6 × 5    5 × 3 + 6 × 6 )   ( 29 40 51 )
 ```
@@ -37,7 +37,7 @@ If the matrix is 2×2, calculate just like that:
 
 ``` c++
 | 2 7 |  = 2 × 6 - 7 × 5  
-| 5 6 |  = -23  
+| 5 6 |  = -23
 ```
 
 If the matrix is more than 2×2, eg 3×3, calculate determinant as such:  
