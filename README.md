@@ -1,6 +1,6 @@
 # matrix-calculator
 
-***a program that does basic math operation on two matrices of dimensions up to 10×10***
+***A program that does basic math operation on two matrices of dimensions up to 10×10***
 
 This is a program that asks the user for two matrices up to size of 10×10, then can do a number of basic operations on them.  
 These operations are:  
