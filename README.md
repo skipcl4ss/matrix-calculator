@@ -2,7 +2,7 @@
 
 ***A program that does basic math operation on two matrices of dimensions up to 10×10***
 
-This is a program that asks the user for two matrices up to size of 10×10, then can do a number of basic operations on them.  
+This is a program that asks the user for two matrices up to size of 10×10, then can do a number of basic operations on them, with the intention for more operations to come.  
 These operations are:  
 ***A+B, A-B, B-A, A×B, B×A, A×B<sup>-1</sup>, B×A<sup>-1</sup>, |A|, |B|***  
 

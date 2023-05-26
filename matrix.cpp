@@ -39,7 +39,7 @@ int main()
     int operation;
     do
     {
-        cout << "Please choose operation type\n(1: A+B, 2: A-B, 3: B-A, 4: A×B, 5: B×A, 6: A×inverse(B), 7: B×inverse(A), 8: |A|, 9: |B|, 10: quit):" << endl;
+        cout << "Please choose an operation\n(1: A+B, 2: A-B, 3: B-A, 4: A×B, 5: B×A, 6: A×inverse(B), 7: B×inverse(A), 8: |A|, 9: |B|, 10: quit):" << endl;
         cin >> operation;
 
         switch (operation)
@@ -52,7 +52,7 @@ int main()
                 {
                     for (int j = 0; j < ac; j++)
                     {
-                        cout << round(a[i][j] + b[i][j]) << " ";
+                        cout << round(a[i][j] + b[i][j]) << "\t";
                     }
                     cout << endl;
                 }
@@ -70,7 +70,7 @@ int main()
                 {
                     for (int j = 0; j < ac; j++)
                     {
-                        cout << round(a[i][j] - b[i][j]) << " ";
+                        cout << round(a[i][j] - b[i][j]) << "\t";
                     }
                     cout << endl;
                 }
@@ -88,7 +88,7 @@ int main()
                 {
                     for (int j = 0; j < bc; j++)
                     {
-                        cout << round(b[i][j] - a[i][j]) << " ";
+                        cout << round(b[i][j] - a[i][j]) << "\t";
                     }
                     cout << endl;
                 }

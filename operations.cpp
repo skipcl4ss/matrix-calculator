@@ -24,7 +24,7 @@ void multiply(int matrix1[10][10], int matrix2[10][10], int row1, int common, in
             }
             // Print each element in the shape of the product matrix, which will be common * common
             // Also approximating to the nearest integer
-            cout << round(sumOfProducts) << " ";
+            cout << round(sumOfProducts) << "\t";
             sumOfProducts = 0;
         }
         cout << endl;
@@ -43,7 +43,7 @@ void multiply(int matrix1[10][10], double matrix2[10][10], int row1, int common,
                 sumOfProducts += matrix1[i][j] * matrix2[j][k];
             }
             // Approximation to the nearest integer using llround to return long long in case of large values
-            cout << llround(sumOfProducts) << " ";
+            cout << llround(sumOfProducts) << "\t";
             sumOfProducts = 0;
         }
         cout << endl;
@@ -143,20 +143,10 @@ void divide(int divident[10][10], int divisor[10][10], int row1, int n)
             {
                 for (int j = 0; j < n; j++)
                 {
-                    // Swap the diagonals and divide by the dereminant
-                    if (i == 0 && j == 0)
-                    {
-                        inv[0][0] = divisor[1][1] / determinant;
-                    }
-                    else if (i == 1 && j == 1)
-                    {
-                        inv[1][1] = divisor[0][0] / determinant;
-                    }
-                    // Multiply the reaining elements by -1 and divide by the determinant
-                    else
-                    {
-                        inv[i][j] = -1 * divisor[i][j] / determinant;
-                    }
+                    // If the element in question is in the main diagonal (i = j), swap the diagonals
+                    // If not, multiply that element by -1
+                    // After that, divide that element by the determinant
+                    inv[i][j] = pow(-1, i + j) * divisor[!j][!i] / determinant;
                 }
             }
         }
