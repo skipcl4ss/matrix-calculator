@@ -10,22 +10,17 @@ These operations are:
 
 ### **multiply**
 
-#### Function for printing a product of two matrices
+#### Two functions for printing a product of two matrices, where the second matrix in the second function contains decimal numbers
 
 Multiplication takes place as follows:  
 In the resultant matrix R, the element Rij is the sum of products of the elements of row i in matrix A and column j in matrix B.  
+The second function operates the same as the first, with the only difference is that it is mainly needed for division, as the inverse of a matrix may contain decimals. That is why its second matrix is declared as a double.
 
 ``` c++
 ( 1 2 )   ( 1 2 3 )   ( 1 × 1 + 2 × 4    1 × 2 + 2 × 5    1 × 3 + 2 × 6 )   (  9 12 15 )  
 ( 3 4 ) × (       ) = ( 3 × 1 + 4 × 4    3 × 2 + 4 × 5    3 × 3 + 4 × 6 ) = ( 19 26 33 )  
 ( 5 6 )   ( 4 5 6 )   ( 5 × 1 + 6 × 4    5 × 2 + 6 × 5    5 × 3 + 6 × 6 )   ( 29 40 51 )
 ```
-
-### **multiplyDouble**
-
-#### Function for printing a product of two matrices, where the second matrix contains decimal numbers
-
-This function operates the same as the above, with the only difference is that it is mainly needed for division, as the inverse of a matrix may contain decimals. That is why the second matrix is declared as a double.
 
 ### **det**
 

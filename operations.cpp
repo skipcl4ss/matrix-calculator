@@ -31,7 +31,7 @@ void multiply(int matrix1[10][10], int matrix2[10][10], int row1, int common, in
     }
 }
 // Same as above, only with the second matrix as double
-void multiplyDouble(int matrix1[10][10], double matrix2[10][10], int row1, int common, int col2)
+void multiply(int matrix1[10][10], double matrix2[10][10], int row1, int common, int col2)
 {
     double sumOfProducts = 0;
     for (int i = 0; i < row1; i++)
@@ -197,6 +197,6 @@ void divide(int divident[10][10], int divisor[10][10], int row1, int n)
             }
         }
         // Print the product of the divident and the inverse of the divisor
-        multiplyDouble(divident, inv, row1, n, n);
+        multiply(divident, inv, row1, n, n);
     }
 }
