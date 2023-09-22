@@ -57,7 +57,7 @@ Also, the number of columns of the divident must be equal to the dimensions of t
 
 ``` c++
 ( a b ) ^ -1   (  d -b )  
-(     )      = (       )  
+(     )      = (       )  / (ad - bc)  
 ( c d )        ( -c  a )  
 ```
 

@@ -105,7 +105,7 @@ long long det(int matrix[10][10], int n)
 // Also, the number of columns of the divident must be equal to the dimensions of the divisor
 // In case of 2*2
 // | a b | ^ -1   |  d -b |
-// |     |      = |       |
+// |     |      = |       | / (ad - bc)
 // | c d |        | -c  a |
 // In case of 3*3, we get the cofactor of the matrix, transpose it, and divide it by the determinant of the matrix
 // The following matrix has a determinant of -6
